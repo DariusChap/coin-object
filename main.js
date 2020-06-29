@@ -1,7 +1,7 @@
 let coin = {
     state: 0,
     flip: function() {
-        return this.state = Math.floor(Math.random() * 1) 
+        this.state = Math.round(Math.random() * 1) 
     },
     toString: function() {
         return this.state === 0 ? "Heads" : "Tails" 
@@ -14,7 +14,7 @@ let coin = {
         image.src = "./images/Tails.jpg"
     }
        
-        return image;
+        return document.body.append(image);
     }
 };
 
@@ -24,7 +24,7 @@ function display20Flips() {
         textBox.style.margin = "7px"
         coin.flip()
         textBox.append(coin.toString())
-        document.body.append(image)
+        document.body.append(textBox)
     }
     return console.log("Flip Completed")
 }
@@ -32,7 +32,7 @@ function display20Flips() {
 function display20Images() {
     for(let i = 0; i < 20; i++) {
         coin.flip()
-        coin.toHTML()
+        document.body.append(coin.toHTML)
     }
 }
 
