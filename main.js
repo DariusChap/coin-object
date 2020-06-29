@@ -14,9 +14,11 @@ let coin = {
         image.src = "./images/Tails.jpg"
     }
        
-        return document.body.append(image);
+        return image;
     }
-};
+    
+
+}
 
 function display20Flips() {
     for(let i = 0; i < 20; i++) {
@@ -32,8 +34,8 @@ function display20Flips() {
 function display20Images() {
     for(let i = 0; i < 20; i++) {
         coin.flip()
-        document.body.append(coin.toHTML)
+        document.body.append(coin.toHTML())
     }
-}
+    return console.log("Flip Images")
+};
 
-// document.body.append(image);
